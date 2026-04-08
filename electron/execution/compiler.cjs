@@ -27,7 +27,12 @@ function execAsync(command) {
  */
 async function compileCpp(sourceFile, compilerPath, outputFile) {
   try {
-    const command = `"${compilerPath}" "${sourceFile}" -o "${outputFile}" -std=c++17`;
+    // On Windows, set a large stack size (256 MB) via the linker to avoid
+    // stack-overflow crashes (exit code 0xC00000FD) in recursive algorithms
+    // like DFS.  On Unix the runner uses `ulimit -s unlimited` instead.
+    const stackFlag =
+      process.platform === "win32" ? "-Wl,--stack,268435456" : "";
+    const command = `"${compilerPath}" "${sourceFile}" -o "${outputFile}" -std=c++17 ${stackFlag}`;
 
     const { stdout, stderr } = await execAsync(command);
 

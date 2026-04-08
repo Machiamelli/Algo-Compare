@@ -51,7 +51,10 @@ async function runProgram(config) {
       args = [sourceFile];
     } else if (language === "java") {
       command = runtimePath; // java path
-      args = ["-cp", classPath, className];
+      // On Windows, give Java a large thread stack (256 MB) since we can't
+      // use `ulimit -s unlimited` as on Unix.
+      const stackArg = process.platform === "win32" ? ["-Xss256m"] : [];
+      args = [...stackArg, "-cp", classPath, className];
     } else {
       resolve({
         success: false,
