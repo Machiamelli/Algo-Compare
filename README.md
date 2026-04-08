@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="src/assets/logos/logo1.png" alt="AlgoCompare Logo" width="100" />
+  <img src="src/assets/logos/logo2.png" alt="AlgoCompare Logo" width="100" />
 </p>
 
 <h1 align="center">AlgoCompare</h1>
@@ -139,24 +139,24 @@ Full dark and light theme support with smooth transitions. Your preference is pe
 
 Grab the latest release for your platform:
 
-| Platform | Format           | Download                                                                                                                 |
-| -------- | ---------------- | ------------------------------------------------------------------------------------------------------------------------ |
-| Windows  | `.exe` installer | [Download for Windows](https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-Setup-1.0.0.exe) |
-| Linux    | `.AppImage`      | [Download for Linux](https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-1.0.0.AppImage)    |
+| Platform | Format           | Download                                                                                                           |
+| -------- | ---------------- | ------------------------------------------------------------------------------------------------------------------ |
+| Windows  | `.exe` installer | [Download for Windows](https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-Setup.exe) |
+| Linux    | `.AppImage`      | [Download for Linux](https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare.AppImage)    |
 
 **Windows (PowerShell):**
 
 ```powershell
 # Download and run the installer
-Invoke-WebRequest -Uri "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-Setup-1.0.0.exe" -OutFile "AlgoCompare-Setup.exe"
-Start-Process "AlgoCompare-Setup.exe"
+Invoke-WebRequest -Uri "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare.exe" -OutFile "AlgoCompare.exe"
+Start-Process "AlgoCompare.exe"
 ```
 
 **Linux:**
 
 ```bash
 # Download, make executable, and run
-curl -L "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-1.0.0.AppImage" -o AlgoCompare.AppImage
+curl -L "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare.AppImage" -o AlgoCompare.AppImage
 chmod +x AlgoCompare.AppImage
 ./AlgoCompare.AppImage
 ```

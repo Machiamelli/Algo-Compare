@@ -75,10 +75,10 @@ document.getElementById("smart-download-btn").addEventListener("click", (e) => {
   const os = getOS();
   if (os === "windows") {
     window.location.href =
-      "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-Setup-1.0.0.exe";
+      "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare.exe";
   } else if (os === "linux") {
     window.location.href =
-      "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare-1.0.0.AppImage";
+      "https://github.com/Machiamelli/Algo-Compare/releases/latest/download/AlgoCompare.AppImage";
   } else {
     // Scroll to the download section for unsupported OS
     document.getElementById("download").scrollIntoView({ behavior: "smooth" });

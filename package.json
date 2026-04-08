@@ -49,6 +49,7 @@
   "build": {
     "appId": "com.machiamelli.algocompare",
     "productName": "AlgoCompare",
+    "artifactName": "${productName}.${ext}",
     "directories": {
       "output": "release"
     },
